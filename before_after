@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتائج وتحولات المشتركين - Captain POP</title>
+    <style>
+        :root {
+            --main-color: #ff4500;
+            --bg-color: #121212;
+            --card-bg: rgba(30, 30, 30, 0.85);
+            --text-color: #ffffff;
+            --text-muted: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("https://imgg.io/images/2026/09/18/25ff0e3b6d7b02f3d25cf56ad5179bdd.jpg");
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 15px;
+            max-width: 900px;
+            margin: 30px auto 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+        }
+
+        .subtitle {
+            color: var(--main-color);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* شبكة ألبوم الصور */
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        /* كارت التحول بأسلوب الكتاب */
+        .book-card {
+            background: var(--card-bg);
+            border: 2px solid #333;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--main-color);
+        }
+
+        /* إطار دمج صوئتين قبل وبعد */
+        .before-after-frame {
+            display: flex;
+            gap: 10px;
+            background: #000;
+            padding: 10px;
+            border-radius: 12px;
+            border: 2px solid var(--main-color);
+        }
+
+        .img-box {
+            flex: 1;
+            position: relative;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 8px;
+            right: 50%;
+            transform: translateX(50%);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .badge-before {
+            background: rgba(217, 83, 79, 0.9);
+        }
+
+        .badge-after {
+            background: rgba(92, 184, 92, 0.9);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+            margin: 15px 0 5px;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* أزرار الإجراءات */
+        .action-btns {
+            text-align: center;
+            margin: 40px 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-action {
+            display: inline-block;
+            padding: 14px 28px;
+            background: var(--main-color);
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        .btn-action:hover {
+            transform: scale(1.05);
+            background: #e03d00;
+        }
+
+        .btn-back {
+            background: #2a2a2a;
+            border: 1px solid #444;
+            box-shadow: none;
+        }
+
+        .btn-back:hover {
+            background: #3d3d3d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            border-top: 1px solid #222;
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📖 ألبوم نتائج وتحولات المشتركين</h1>
+        <p class="subtitle">قصص نجاح حقيقية قبل وبعد التدريب مع كابتن إيهاب الشريف</p>
+    </header>
+
+    <div class="container">
+
+        <!-- شبكة ألبوم الصور (قبل وبعد) -->
+        <div class="album-grid">
+
+            <!-- كارت مشترك 1 -->
+            <div class="book-card">
+                <div class="before-after-frame">
+                    <div class="img-box">
+                        <!-- استبدل رابط الصورة برابط صورة قبل -->
+                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Before" alt="قبل">
+                        <span class="badge badge-before">قبل</span>
+                    </div>
+                    <div class="img-box">
+                        <!-- استبدل رابط الصورة برابط صورة بعد -->
+                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=After" alt="بعد">
+                        <span class="badge badge-after">بعد</span>
+                    </div>
+                </div>
+                <div class="card-title">تغيير شامل خلال 3 أشهر</div>
+                <div class="card-desc">خسارة 12 كيلو مع التنشيف وبناء كتلة عضلية صافية.</div>
+            </div>
+
+            <!-- كارت مشترك 2 -->
+            <div class="book-card">
+                <div class="before-after-frame">
+                    <div class="img-box">
+                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Before" alt="قبل">
+                        <span class="badge badge-before">قبل</span>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=After" alt="بعد">
+                        <span class="badge badge-after">بعد</span>
+                    </div>
+                </div>
+                <div class="card-title">تحول نسبة الدهون والتنشيف</div>
+                <div class="card-desc">الوصول لنسبة دهون 10% ونحت عضلات البطن والقوام.</div>
+            </div>
+
+            <!-- كارت مشترك 3 -->
+            <div class="book-card">
+                <div class="before-after-frame">
+                    <div class="img-box">
+                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Before" alt="قبل">
+                        <span class="badge badge-before">قبل</span>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=After" alt="بعد">
+                        <span class="badge badge-after">بعد</span>
+                    </div>
+                </div>
+                <div class="card-title">برنامج التضخيم وزيادة العضلات</div>
+                <div class="card-desc">زيادة 8 كيلو عضل صافي مع برنامج تغذية وتدريب مخصص.</div>
+            </div>
+
+            <!-- كارت مشترك 4 -->
+            <div class="book-card">
+                <div class="before-after-frame">
+                    <div class="img-box">
+                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Before" alt="قبل">
+                        <span class="badge badge-before">قبل</span>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=After" alt="بعد">
+                        <span class="badge badge-after">بعد</span>
+                    </div>
+                </div>
+                <div class="card-title">تطوير القوام وتحسين الأداء</div>
+                <div class="card-desc">نتائج مذهلة في شهرين فقط من الالتزام بالخطة المخصصة.</div>
+            </div>
+
+        </div>
+
+        <!-- أزرار أسفل الصفحة -->
+        <div class="action-btns">
+            <a href="https://wa.me/201555557031?text=شفت%20نتائج%20المشتركين%20وعايز%20أبدأ%20تحولي%20معاك" class="btn-action">
+                💪 ابدأ تحولك الخاص الآن (راسلنا واتساب)
+            </a>
+            <a href="index.html" class="btn-action btn-back">
+                ⬅️ العودة للرئيسية
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة ©️ كابتن إيهاب الشريف 2026</p>
+    </footer>
+
+</body>
+</html>
