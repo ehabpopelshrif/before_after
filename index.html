@@ -83,7 +83,7 @@
             border-color: var(--main-color);
         }
 
-        /* إطار دمج صوئتين قبل وبعد */
+        /* إطار دمج صورتين معاً بدون أي كتابة */
         .before-after-frame {
             display: flex;
             gap: 10px;
@@ -104,27 +104,6 @@
             object-fit: cover;
             border-radius: 8px;
             display: block;
-        }
-
-        .badge {
-            position: absolute;
-            bottom: 8px;
-            right: 50%;
-            transform: translateX(50%);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-        }
-
-        .badge-before {
-            background: rgba(217, 83, 79, 0.9);
-        }
-
-        .badge-after {
-            background: rgba(92, 184, 92, 0.9);
         }
 
         .card-title {
@@ -191,26 +170,22 @@
 
     <header>
         <h1>📖 ألبوم نتائج وتحولات المشتركين</h1>
-        <p class="subtitle">قصص نجاح حقيقية قبل وبعد التدريب مع كابتن إيهاب الشريف</p>
+        <p class="subtitle">قصص نجاح حقيقية للتدريب مع كابتن إيهاب الشريف</p>
     </header>
 
     <div class="container">
 
-        <!-- شبكة ألبوم الصور (قبل وبعد) -->
+        <!-- شبكة ألبوم الصور -->
         <div class="album-grid">
 
             <!-- كارت مشترك 1 -->
             <div class="book-card">
                 <div class="before-after-frame">
                     <div class="img-box">
-                        <!-- استبدل رابط الصورة برابط صورة قبل -->
-                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Before" alt="قبل">
-                        <span class="badge badge-before">قبل</span>
+                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Image+1" alt="صورة 1">
                     </div>
                     <div class="img-box">
-                        <!-- استبدل رابط الصورة برابط صورة بعد -->
-                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=After" alt="بعد">
-                        <span class="badge badge-after">بعد</span>
+                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=Image+2" alt="صورة 2">
                     </div>
                 </div>
                 <div class="card-title">تغيير شامل خلال 3 أشهر</div>
@@ -221,12 +196,10 @@
             <div class="book-card">
                 <div class="before-after-frame">
                     <div class="img-box">
-                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Before" alt="قبل">
-                        <span class="badge badge-before">قبل</span>
+                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Image+1" alt="صورة 1">
                     </div>
                     <div class="img-box">
-                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=After" alt="بعد">
-                        <span class="badge badge-after">بعد</span>
+                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=Image+2" alt="صورة 2">
                     </div>
                 </div>
                 <div class="card-title">تحول نسبة الدهون والتنشيف</div>
@@ -237,12 +210,10 @@
             <div class="book-card">
                 <div class="before-after-frame">
                     <div class="img-box">
-                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Before" alt="قبل">
-                        <span class="badge badge-before">قبل</span>
+                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Image+1" alt="صورة 1">
                     </div>
                     <div class="img-box">
-                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=After" alt="بعد">
-                        <span class="badge badge-after">بعد</span>
+                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=Image+2" alt="صورة 2">
                     </div>
                 </div>
                 <div class="card-title">برنامج التضخيم وزيادة العضلات</div>
@@ -253,12 +224,10 @@
             <div class="book-card">
                 <div class="before-after-frame">
                     <div class="img-box">
-                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Before" alt="قبل">
-                        <span class="badge badge-before">قبل</span>
+                        <img src="https://via.placeholder.com/300x400/222/ffffff?text=Image+1" alt="صورة 1">
                     </div>
                     <div class="img-box">
-                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=After" alt="بعد">
-                        <span class="badge badge-after">بعد</span>
+                        <img src="https://via.placeholder.com/300x400/ff4500/ffffff?text=Image+2" alt="صورة 2">
                     </div>
                 </div>
                 <div class="card-title">تطوير القوام وتحسين الأداء</div>
@@ -272,7 +241,8 @@
             <a href="https://wa.me/201555557031?text=شفت%20نتائج%20المشتركين%20وعايز%20أبدأ%20تحولي%20معاك" class="btn-action">
                 💪 ابدأ تحولك الخاص الآن (راسلنا واتساب)
             </a>
-            <a href="<?php echo home_url(); ?>">العودة للرئيسية</a>
+            <a href="../index.html" class="btn-action btn-back">
+                ⬅️ العودة للرئيسية
             </a>
         </div>
 
