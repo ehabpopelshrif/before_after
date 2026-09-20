@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>نتائج وتحولات المشتركين | Captain POP</title>
-<meta name="description" content="ألبوم صور وفيديوهات تحولات ونتائج المشتركين مع كابتن إيهاب الشريف - قصص نجاح حقيقية.">
+<title>ألبوم نتائج وتحولات المشتركين | Captain POP</title>
+<meta name="description" content="قصص نجاح حقيقية للتدريب مع كابتن إيهاب الشريف">
 <meta name="theme-color" content="#0e0e0e">
 
 <!-- Fonts -->
@@ -48,7 +48,7 @@
 
   .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
 
-  /* ========== NAVBAR ========== */
+  /* NAVBAR */
   .nav-bar {
     position: sticky;
     top: 0;
@@ -79,28 +79,28 @@
     border: 2px solid var(--orange);
   }
 
-  /* ========== HERO HEADER ========== */
+  /* HERO HEADER */
   .hero-header {
-    padding: 60px 0 40px;
+    padding: 50px 0 30px;
     text-align: center;
     background: radial-gradient(ellipse at 50% 0%, rgba(255, 77, 0, 0.15), transparent 70%);
   }
   .hero-header h1 {
     font-family: var(--display);
     font-weight: 900;
-    font-size: clamp(2.2rem, 6vw, 3.8rem);
-    margin: 0 0 12px;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 0 0 10px;
     line-height: 1.2;
   }
   .hero-header h1 span { color: var(--orange); }
   .hero-header p {
-    color: var(--muted);
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    margin: 0 auto 28px;
-    max-width: 600px;
+    color: var(--ember);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 600;
+    margin: 0 auto 24px;
   }
 
-  /* ========== BUTTONS ========== */
+  /* BUTTONS */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -109,44 +109,22 @@
     font-family: var(--display);
     font-weight: 800;
     font-size: 0.95rem;
-    padding: 12px 24px;
+    padding: 10px 22px;
     border-radius: 999px;
     border: 2px solid transparent;
     cursor: pointer;
     transition: transform .2s ease, background .2s ease, border-color .2s ease;
   }
   .btn:hover { transform: translateY(-2px); }
-  .btn-primary { background: var(--orange); color: #fff; box-shadow: 0 8px 24px rgba(255, 77, 0, 0.3); }
-  .btn-primary:hover { background: var(--ember); }
   .btn-ghost { border-color: rgba(255, 255, 255, 0.25); color: #fff; background: rgba(23, 23, 23, 0.6); }
   .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
 
-  /* ========== FACTS STRIP ========== */
-  .facts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    margin-bottom: 50px;
-  }
-  .fact { padding: 20px 12px; text-align: center; }
-  .fact + .fact { border-inline-start: 1px solid var(--line); }
-  .fact b {
-    display: block;
-    font-family: var(--display);
-    font-weight: 900;
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-    color: var(--orange);
-  }
-  .fact span { color: var(--muted); font-size: 0.9rem; }
-
-  /* ========== GALLERY GRID ========== */
+  /* GALLERY GRID */
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-    gap: 24px;
-    padding-bottom: 80px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+    padding: 30px 0 80px;
   }
 
   .card {
@@ -165,7 +143,6 @@
 
   .card-img-wrap {
     position: relative;
-    aspect-ratio: 4/5;
     width: 100%;
     overflow: hidden;
     background: var(--panel-2);
@@ -173,46 +150,32 @@
   }
   .card-img-wrap img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
     transition: transform 0.4s ease;
   }
   .card:hover .card-img-wrap img {
-    transform: scale(1.03);
-  }
-
-  .card-badge {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    background: rgba(14, 14, 14, 0.75);
-    backdrop-filter: blur(8px);
-    color: var(--ember);
-    border: 1px solid rgba(255, 122, 47, 0.3);
-    padding: 4px 12px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-family: var(--display);
-    font-weight: 800;
+    transform: scale(1.02);
   }
 
   .card-body {
     padding: 18px 20px;
+    border-top: 1px solid var(--line);
   }
   .card-title {
     font-family: var(--display);
     font-weight: 800;
     font-size: 1.15rem;
     margin: 0 0 6px;
+    color: var(--text);
   }
   .card-desc {
     color: var(--muted);
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     margin: 0;
   }
 
-  /* ========== LIGHTBOX (MODAL FOR IMAGES) ========== */
+  /* LIGHTBOX MODAL */
   .modal {
     position: fixed;
     inset: 0;
@@ -232,10 +195,10 @@
     pointer-events: auto;
   }
   .modal-content {
-    max-width: 90vw;
-    max-height: 85vh;
+    max-width: 95vw;
+    max-height: 90vh;
     border-radius: 12px;
-    border: 2px solid var(--line);
+    border: 1px solid var(--line);
     box-shadow: 0 20px 60px rgba(0,0,0,0.8);
     object-fit: contain;
   }
@@ -256,16 +219,16 @@
   }
   .modal-close:hover { border-color: var(--orange); color: var(--orange); }
 
-  /* ========== FOOTER ========== */
+  /* FOOTER */
   footer {
-    padding: 30px 20px 90px;
+    padding: 30px 20px 80px;
     border-top: 1px solid var(--line);
     text-align: center;
     color: var(--muted);
     font-size: .95rem;
   }
 
-  /* floating WhatsApp */
+  /* FLOATING WHATSAPP */
   .float-wa {
     position: fixed;
     inset-inline-start: 18px;
@@ -284,13 +247,12 @@
 
   @media (max-width: 640px) {
     .gallery-grid { grid-template-columns: 1fr; }
-    .hero-header { padding: 40px 0 20px; }
   }
 </style>
 </head>
 <body>
 
-<!-- ========== NAVBAR ========== -->
+<!-- NAVBAR -->
 <nav class="nav-bar">
   <div class="wrap nav-inner">
     <div class="brand-logo">
@@ -301,69 +263,66 @@
   </div>
 </nav>
 
-<!-- ========== HERO HEADER ========== -->
+<!-- HERO HEADER -->
 <header class="hero-header">
   <div class="wrap">
-    <h1>ألبوم <span>نتائج وتحولات</span> المشتركين 📸</h1>
-    <p>قصص نجاح حقيقية وتطورات فعليّة لرجال وأبطال دربوا مع كابتن إيهاب الشريف.</p>
-    <a href="https://wa.me/201555557031?text=أريد%20الاستفسار%20عن%20التدريب%20الأونلاين" class="btn btn-primary" target="_blank" rel="noopener">
-      ابتدئ تحولك الآن 🔥
-    </a>
+    <h1>📷 ألبوم نتائج وتحولات المشتركين</h1>
+    <p>قصص نجاح حقيقية للتدريب مع كابتن إيهاب الشريف</p>
   </div>
 </header>
 
 <main class="wrap">
-  <!-- ========== FACTS ========== -->
-  <div class="facts-grid">
-    <div class="fact"><b>+100</b><span>تحول ناجح</span></div>
-    <div class="fact"><b>100%</b><span>التزام ومتابعة</span></div>
-    <div class="fact"><b>+15</b><span>سنة خبرة</span></div>
-  </div>
-
-  <!-- ========== GALLERY GRID ========== -->
+  <!-- GALLERY GRID WITH YOUR ORIGINAL IMAGES -->
   <div class="gallery-grid">
 
-    <!-- كارت 1 -->
+    <!-- الصورة والألبوم الأول -->
     <article class="card">
       <div class="card-img-wrap" onclick="openModal(this.querySelector('img').src)">
-        <span class="card-badge">نتيجة ممتازة 🔥</span>
-        <img src="https://imgg.io/images/2026/09/18/25ff0e3b6d7b02f3d25cf56ad5179bdd.jpg" alt="تحول مشترك">
+        <img src="https://imgg.io/images/2026/09/18/25ff0e3b6d7b02f3d25cf56ad5179bdd.jpg" alt="تحول المشترك الأول">
       </div>
       <div class="card-body">
-        <h3 class="card-title">تنشيف وتنسيق قوام</h3>
-        <p class="card-desc">التزام بالدايت والتمرين المخصص لمدة 3 شهور أونلاين.</p>
+        <h3 class="card-title">تطور الظهر والكتف الخلفي</h3>
+        <p class="card-desc">نتيجة التزام بالبرنامج التدريبي والنظام الغذائي الخاص.</p>
       </div>
     </article>
 
-    <!-- كارت 2 -->
+    <!-- الصورة والألبوم الثاني -->
     <article class="card">
       <div class="card-img-wrap" onclick="openModal(this.querySelector('img').src)">
-        <span class="card-badge">تحول كامل 💪</span>
-        <img src="https://l.top4top.io/p_3915ar3401.jpeg" alt="تحول مشترك">
+        <img src="https://imgg.io/images/2026/09/18/92ca3cd691bebfef5c03c5ea77242d27.jpg" alt="تحول المشترك الثاني">
       </div>
       <div class="card-body">
-        <h3 class="card-title">زيادة كتلة عضلية</h3>
-        <p class="card-desc">تطور في مستوى الضخامة العضلية وتقسيم الظهر والكتف.</p>
+        <h3 class="card-title">تنسيق القوام وبناء العضلات</h3>
+        <p class="card-desc">تحول واضح في الحجم والتنشيف العضلي.</p>
       </div>
     </article>
 
-    <!-- يمكنك إضافة المزيد من الكروت بنفس النمط هنا -->
+    <!-- الصورة والألبوم الثالث -->
+    <article class="card">
+      <div class="card-img-wrap" onclick="openModal(this.querySelector('img').src)">
+        <img src="https://imgg.io/images/2026/09/18/38a068032c8ec5eeef9bb1ff8f2445e9.jpg" alt="تحول المشترك الثالث">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">تنزيل الدهون ونحت الجسم</h3>
+        <p class="card-desc">تغيير كامل في قياسات الجسم ونسبة الدهون.</p>
+      </div>
+    </article>
 
   </div>
 </main>
 
-<!-- ========== LIGHTBOX MODAL ========== -->
+<!-- LIGHTBOX MODAL -->
 <div class="modal" id="imageModal" onclick="closeModal()">
   <button class="modal-close" onclick="closeModal()">&times;</button>
-  <img class="modal-content" id="modalImg" src="" alt="صورة مكبرة">
+  <img class="modal-content" id="modalImg" src="" alt="عرض الصورة">
 </div>
 
-<!-- ========== FOOTER ========== -->
+<!-- FOOTER -->
 <footer>
   جميع الحقوق محفوظة ©️ كابتن إيهاب الشريف 2026
 </footer>
 
-<!-- زر واتساب عائم -->
+<!-- FLOATING WHATSAPP -->
 <a class="float-wa" href="https://wa.me/201555557031" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5zM12 20a8.9 8.9 0 0 1-4.5-1.2l-.3-.2-2.8.7.8-2.7-.2-.3A8.9 8.9 0 1 1 12 20zm4.9-6.6c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.3 7.3 0 0 1-3.6-3.1c-.3-.5.3-.5.8-1.5a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
 </a>
