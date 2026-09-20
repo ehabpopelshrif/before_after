@@ -3,338 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ألبوم نتائج وتحولات المشتركين | Captain POP</title>
+<title>نتائج وتحولات المشتركين - Captain POP</title>
 <meta name="description" content="قصص نجاح حقيقية للتدريب مع كابتن إيهاب الشريف">
 <meta name="theme-color" content="#0e0e0e">
 
-<!-- Fonts -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root {
-    --ink: #0e0e0e;
-    --panel: #171717;
-    --panel-2: #1f1f1f;
-    --line: #2b2b2b;
-    --orange: #ff4d00;
-    --ember: #ff7a2f;
-    --text: #f5f2ee;
-    --muted: #a8a29a;
-    --radius: 20px;
-    --display: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
-    --body: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
-  }
+    :root {
+        --ink: #0e0e0e;
+        --panel: #171717;
+        --panel-2: #1f1f1f;
+        --line: #2b2b2b;
+        --orange: #ff4d00;
+        --ember: #ff7a2f;
+        --text: #f5f2ee;
+        --muted: #a8a29a;
+        --radius: 20px;
+        --display: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+        --body: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+    }
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-  body {
-    margin: 0;
-    background: var(--ink);
-    color: var(--text);
-    font-family: var(--body);
-    font-size: 17px;
-    line-height: 1.75;
-    -webkit-font-smoothing: antialiased;
-  }
+    body {
+        margin: 0;
+        background: var(--ink);
+        color: var(--text);
+        font-family: var(--body);
+        font-size: 17px;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+    }
 
-  a { color: inherit; text-decoration: none; }
-  a:focus-visible, button:focus-visible {
-    outline: 3px solid var(--ember);
-    outline-offset: 3px;
-  }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible {
+        outline: 3px solid var(--ember);
+        outline-offset: 3px;
+    }
 
-  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
 
-  /* NAVBAR */
-  .nav-bar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(14, 14, 14, 0.88);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-    padding: 14px 0;
-  }
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: var(--display);
-    font-weight: 900;
-    font-size: 1.3rem;
-  }
-  .brand-logo img {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--orange);
-  }
+    /* ========== NAVBAR ========== */
+    .nav-bar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(14, 14, 14, 0.88);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+        padding: 14px 0;
+    }
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: var(--display);
+        font-weight: 900;
+        font-size: 1.3rem;
+    }
+    .brand-logo img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--orange);
+    }
 
-  /* HERO HEADER */
-  .hero-header {
-    padding: 50px 0 30px;
-    text-align: center;
-    background: radial-gradient(ellipse at 50% 0%, rgba(255, 77, 0, 0.15), transparent 70%);
-  }
-  .hero-header h1 {
-    font-family: var(--display);
-    font-weight: 900;
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    margin: 0 0 10px;
-    line-height: 1.2;
-  }
-  .hero-header h1 span { color: var(--orange); }
-  .hero-header p {
-    color: var(--ember);
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 600;
-    margin: 0 auto 24px;
-  }
+    /* ========== HERO HEADER ========== */
+    .hero-header {
+        padding: 50px 0 30px;
+        text-align: center;
+        background: radial-gradient(ellipse at 50% 0%, rgba(255, 77, 0, 0.15), transparent 70%);
+    }
+    .hero-header h1 {
+        font-family: var(--display);
+        font-weight: 900;
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        margin: 0 0 10px;
+        line-height: 1.2;
+    }
+    .hero-header h1 span { color: var(--orange); }
+    .hero-header p {
+        color: var(--ember);
+        font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+        font-weight: 600;
+        margin: 0 auto 24px;
+    }
 
-  /* BUTTONS */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-family: var(--display);
-    font-weight: 800;
-    font-size: 0.95rem;
-    padding: 10px 22px;
-    border-radius: 999px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: transform .2s ease, background .2s ease, border-color .2s ease;
-  }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-ghost { border-color: rgba(255, 255, 255, 0.25); color: #fff; background: rgba(23, 23, 23, 0.6); }
-  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+    /* ========== BUTTONS ========== */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 1rem;
+        padding: 12px 28px;
+        border-radius: 999px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { 
+        background: var(--orange); 
+        color: #fff; 
+        box-shadow: 0 8px 24px rgba(255, 77, 0, 0.35); 
+    }
+    .btn-primary:hover { background: var(--ember); }
+    .btn-ghost { 
+        border-color: rgba(255, 255, 255, 0.25); 
+        color: #fff; 
+        background: rgba(23, 23, 23, 0.6); 
+    }
+    .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
 
-  /* GALLERY GRID */
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 28px;
-    padding: 30px 0 80px;
-  }
+    /* ========== GALLERY GRID ========== */
+    .album-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        gap: 28px;
+        padding: 30px 0 60px;
+    }
 
-  .card {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover {
-    transform: translateY(-6px);
-    border-color: var(--orange);
-    box-shadow: 0 16px 40px rgba(255, 77, 0, 0.18);
-  }
+    .book-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .book-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--orange);
+        box-shadow: 0 16px 40px rgba(255, 77, 0, 0.18);
+    }
 
-  .card-img-wrap {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    background: var(--panel-2);
-    cursor: pointer;
-  }
-  .card-img-wrap img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-  .card:hover .card-img-wrap img {
-    transform: scale(1.02);
-  }
+    .single-image-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3/4;
+        background: var(--panel-2);
+        overflow: hidden;
+    }
 
-  .card-body {
-    padding: 18px 20px;
-    border-top: 1px solid var(--line);
-  }
-  .card-title {
-    font-family: var(--display);
-    font-weight: 800;
-    font-size: 1.15rem;
-    margin: 0 0 6px;
-    color: var(--text);
-  }
-  .card-desc {
-    color: var(--muted);
-    font-size: 0.92rem;
-    margin: 0;
-  }
+    .single-image-frame a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
 
-  /* LIGHTBOX MODAL */
-  .modal {
-    position: fixed;
-    inset: 0;
-    z-index: 200;
-    background: rgba(0, 0, 0, 0.92);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  .modal.open {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .modal-content {
-    max-width: 95vw;
-    max-height: 90vh;
-    border-radius: 12px;
-    border: 1px solid var(--line);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-    object-fit: contain;
-  }
-  .modal-close {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--panel);
-    color: var(--text);
-    border: 1px solid var(--line);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-  }
-  .modal-close:hover { border-color: var(--orange); color: var(--orange); }
+    .single-image-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+    }
 
-  /* FOOTER */
-  footer {
-    padding: 30px 20px 80px;
-    border-top: 1px solid var(--line);
-    text-align: center;
-    color: var(--muted);
-    font-size: .95rem;
-  }
+    .book-card:hover .single-image-frame img {
+        transform: scale(1.04);
+    }
 
-  /* FLOATING WHATSAPP */
-  .float-wa {
-    position: fixed;
-    inset-inline-start: 18px;
-    bottom: 18px;
-    z-index: 20;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: #1ea952;
-    display: grid;
-    place-items: center;
-    color: #fff;
-    box-shadow: 0 10px 28px rgba(0,0,0,.5);
-  }
-  .float-wa svg { width: 30px; height: 30px; }
+    .card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        border-top: 1px solid var(--line);
+    }
 
-  @media (max-width: 640px) {
-    .gallery-grid { grid-template-columns: 1fr; }
-  }
+    .card-title {
+        font-family: var(--display);
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 8px;
+        line-height: 1.3;
+    }
+
+    .card-desc {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* ========== ACTION BUTTONS SECTION ========== */
+    .action-btns {
+        text-align: center;
+        margin: 20px 0 60px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+        padding: 30px 20px 80px;
+        border-top: 1px solid var(--line);
+        text-align: center;
+        color: var(--muted);
+        font-size: .95rem;
+        background: var(--ink);
+    }
+
+    /* Floating WhatsApp Button */
+    .float-wa {
+        position: fixed;
+        inset-inline-start: 18px;
+        bottom: 18px;
+        z-index: 20;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #1ea952;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        box-shadow: 0 10px 28px rgba(0,0,0,.5);
+    }
+    .float-wa svg { width: 30px; height: 30px; }
+
+    @media (max-width: 640px) {
+        .album-grid { grid-template-columns: 1fr; }
+        .hero-header { padding: 40px 0 20px; }
+    }
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="nav-bar">
-  <div class="wrap nav-inner">
-    <div class="brand-logo">
-      <img src="https://l.top4top.io/p_3915ar3401.jpeg" alt="Captain POP">
-      <span>Captain POP</span>
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+        <div class="wrap nav-inner">
+            <div class="brand-logo">
+                <img src="https://l.top4top.io/p_3915ar3401.jpeg" alt="Captain POP">
+                <span>Captain POP</span>
+            </div>
+            <a href="../" class="btn btn-ghost">← العودة للرئيسية</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="hero-header">
+        <div class="wrap">
+            <h1>📖 ألبوم <span>نتائج وتحولات</span> المشتركين</h1>
+            <p class="subtitle">قصص نجاح حقيقية للتدريب مع كابتن إيهاب الشريف</p>
+        </div>
+    </header>
+
+    <div class="wrap">
+
+        <!-- شبكة ألبوم الصور الحقيقية بالكامل -->
+        <div class="album-grid">
+
+            <!-- كارت مشترك 1 -->
+            <article class="book-card">
+                <div class="single-image-frame">
+                    <a href="https://f.top4top.io/p_3914elosn2.jpeg" target="_blank" rel="noopener">
+                        <img src="https://f.top4top.io/p_3914elosn2.jpeg" alt="نتيجة المشترك 1">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">تغيير شامل خلال 3 أشهر</h3>
+                    <p class="card-desc">خسارة 23 كيلو مع بناء كتلة عضلية</p>
+                </div>
+            </article>
+
+            <!-- كارت مشترك 2 -->
+            <article class="book-card">
+                <div class="single-image-frame">
+                    <a href="https://h.top4top.io/p_3914vtajj4.jpeg" target="_blank" rel="noopener">
+                        <img src="https://h.top4top.io/p_3914vtajj4.jpeg" alt="نتيجة المشترك 2">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">تحول نسبة الدهون والتنشيف</h3>
+                    <p class="card-desc">الوصول لنسبة دهون 10% ونحت عضلات البطن والقوام.</p>
+                </div>
+            </article>
+
+            <!-- كارت مشترك 3 -->
+            <article class="book-card">
+                <div class="single-image-frame">
+                    <a href="https://e.top4top.io/p_3914iz6hg1.jpeg" target="_blank" rel="noopener">
+                        <img src="https://e.top4top.io/p_3914iz6hg1.jpeg" alt="نتيجة المشترك 3">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">برنامج التضخيم وزيادة العضلات</h3>
+                    <p class="card-desc">زيادة 8 كيلو مع برنامج تغذية وتدريب مخصص.</p>
+                </div>
+            </article>
+
+            <!-- كارت مشترك 4 -->
+            <article class="book-card">
+                <div class="single-image-frame">
+                    <a href="https://g.top4top.io/p_3914u5oo03.jpeg" target="_blank" rel="noopener">
+                        <img src="https://g.top4top.io/p_3914u5oo03.jpeg" alt="نتيجة المشترك 4">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">تطوير القوام وتحسين الأداء</h3>
+                    <p class="card-desc">نتائج مذهلة في شهرين فقط من الالتزام بالخطة المخصصة.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- أزرار الدعوة للإجراء (CTA) -->
+        <div class="action-btns">
+            <a href="https://wa.me/201555557031?text=شفت%20نتائج%20المشتركين%20وعايز%20أبدأ%20تحولي%20معاك" class="btn btn-primary" target="_blank" rel="noopener">
+                💪 ابدأ تحولك الخاص الآن (راسلنا واتساب)
+            </a>
+            <a href="../" class="btn btn-ghost">← العودة للصفحة الرئيسية</a>
+        </div>
+
     </div>
-    <a href="../" class="btn btn-ghost">← العودة للرئيسية</a>
-  </div>
-</nav>
 
-<!-- HERO HEADER -->
-<header class="hero-header">
-  <div class="wrap">
-    <h1>📸 ألبوم <span>نتائج وتحولات</span> المشتركين</h1>
-    <p>قصص نجاح حقيقية للتدريب مع كابتن إيهاب الشريف</p>
-  </div>
-</header>
+    <!-- FOOTER -->
+    <footer>
+        <p>جميع الحقوق محفوظة ©️ كابتن إيهاب الشريف 2026</p>
+    </footer>
 
-<main class="wrap">
-  <div class="gallery-grid">
-
-    <!-- الكارت الأول -->
-    <article class="card">
-      <div class="card-img-wrap" onclick="openModal(this.querySelector('img').src)">
-        <img src="https://imgg.io/images/2026/09/18/25ff0e3b6d7b02f3d25cf56ad5179bdd.jpg" alt="تحول المشترك">
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">تطور الظهر والكتف الخلفي</h3>
-        <p class="card-desc">نتيجة التزام بالبرنامج التدريبي والنظام الغذائي المخصص.</p>
-      </div>
-    </article>
-
-    <!-- الكارت الثاني -->
-    <article class="card">
-      <div class="card-img-wrap" onclick="openModal(this.querySelector('img').src)">
-        <img src="https://imgg.io/images/2026/09/18/92ca3cd691bebfef5c03c5ea77242d27.jpg" alt="تحول المشترك">
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">تنسيق القوام وبناء العضلات</h3>
-        <p class="card-desc">تطور ممتاز في الحجم والتنشيف العضلي.</p>
-      </div>
-    </article>
-
-    <!-- الكارت الثالث -->
-    <article class="card">
-      <div class="card-img-wrap" onclick="openModal(this.querySelector('img').src)">
-        <img src="https://imgg.io/images/2026/09/18/38a068032c8ec5eeef9bb1ff8f2445e9.jpg" alt="تحول المشترك">
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">تنزيل الدهون ونحت الجسم</h3>
-        <p class="card-desc">تغيير كامل في قياسات الجسم ونسبة الدهون.</p>
-      </div>
-    </article>
-
-  </div>
-</main>
-
-<!-- LIGHTBOX MODAL -->
-<div class="modal" id="imageModal" onclick="closeModal()">
-  <button class="modal-close" onclick="closeModal()">&times;</button>
-  <img class="modal-content" id="modalImg" src="" alt="عرض الصورة">
-</div>
-
-<!-- FOOTER -->
-<footer>
-  جميع الحقوق محفوظة ©️ كابتن إيهاب الشريف 2026
-</footer>
-
-<!-- FLOATING WHATSAPP -->
-<a class="float-wa" href="https://wa.me/201555557031" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5zM12 20a8.9 8.9 0 0 1-4.5-1.2l-.3-.2-2.8.7.8-2.7-.2-.3A8.9 8.9 0 1 1 12 20zm4.9-6.6c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.3 7.3 0 0 1-3.6-3.1c-.3-.5.3-.5.8-1.5a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
-</a>
-
-<script>
-  function openModal(src) {
-    document.getElementById('modalImg').src = src;
-    document.getElementById('imageModal').classList.add('open');
-  }
-  function closeModal() {
-    document.getElementById('imageModal').classList.remove('open');
-  }
-</script>
+    <!-- زر واتساب العائم -->
+    <a class="float-wa" href="https://wa.me/201555557031?text=شفت%20نتائج%20المشتركين%20وعايز%20أبدأ%20تحولي%20معاك" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5zM12 20a8.9 8.9 0 0 1-4.5-1.2l-.3-.2-2.8.7.8-2.7-.2-.3A8.9 8.9 0 1 1 12 20zm4.9-6.6c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.3 7.3 0 0 1-3.6-3.1c-.3-.5.3-.5.8-1.5a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
+    </a>
 
 </body>
 </html>
